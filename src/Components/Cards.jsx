@@ -1,14 +1,14 @@
-// ChildComponent.jsx
+// Card.jsx
 import React from 'react';
+import SubCard from './Subcard';
 
-function ChildComponent(props) {
+function Card(props) {
   return (
-    <div>
-      <h2>Child Component</h2>
-      <p>Name: {props.name}</p>
-      <p>Age: {props.age}</p>
+    <div className='text-red-600'>
+      <h2>Card Component</h2>
+      <SubCard name={props.name} age={props.age} />
     </div>
   );
 }
 
-export default ChildComponent;
+export default Card;
