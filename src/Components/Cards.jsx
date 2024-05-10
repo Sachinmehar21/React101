@@ -1,11 +1,14 @@
+// ChildComponent.jsx
 import React from 'react';
 
-const Cards = () => {
+function ChildComponent(props) {
   return (
-    <>
-      <div className="text-red-700 h-2vw w-1/5 bg-red-500">abc</div>
-    </>
+    <div>
+      <h2>Child Component</h2>
+      <p>Name: {props.name}</p>
+      <p>Age: {props.age}</p>
+    </div>
   );
-};
+}
 
-export default Cards;
+export default ChildComponent;
