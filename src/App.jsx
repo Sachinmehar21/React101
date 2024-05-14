@@ -1,17 +1,18 @@
 import React from "react";
-import CompA from "./Components/CompA";
+import { Route, Routes } from "react-router-dom";
 
-const context = React.createContext();
+import Home from "./Components/Home";
+import About from "./Components/About";
+import Contact from "./Components/Contact";
 
 const App = () => {
   return (
-    <>
-      <context.Provider value="I teleported from App.jsx directly to Component C I am not in Context I am the CONTEXT!">
-        <CompA />
-      </context.Provider>
-    </>
+    <Routes>
+      <Route path="/" element={<Home />} />
+      <Route path="/about" element={<About />} />
+      <Route path="/contact" element={<Contact />} />
+    </Routes>
   );
 };
 
 export default App;
-export { context };
